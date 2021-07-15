@@ -1,0 +1,9 @@
+/home/kevin/projetIntegration/install/_setup_util.py
+/home/kevin/projetIntegration/install/env.sh
+/home/kevin/projetIntegration/install/setup.bash
+/home/kevin/projetIntegration/install/local_setup.bash
+/home/kevin/projetIntegration/install/setup.sh
+/home/kevin/projetIntegration/install/local_setup.sh
+/home/kevin/projetIntegration/install/setup.zsh
+/home/kevin/projetIntegration/install/local_setup.zsh
+/home/kevin/projetIntegration/install/.rosinstall
