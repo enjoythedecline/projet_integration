@@ -1,2 +1,2 @@
-hello_world
+projetIntegration
 -DCATKIN_DEVEL_PREFIX=/home/kevin/projetIntegration/devel -DCMAKE_INSTALL_PREFIX=/home/kevin/projetIntegration/install -G Unix Makefiles

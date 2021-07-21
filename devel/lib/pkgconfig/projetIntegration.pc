@@ -1,0 +1,8 @@
+prefix=/home/kevin/projetIntegration/devel
+
+Name: projetIntegration
+Description: Description of projetIntegration
+Version: 0.0.0
+Cflags: -I/home/kevin/projetIntegration/devel/include
+Libs: -L${prefix}/lib 
+Requires: geometry_msgs roscpp rospy std_msgs message_runtime
