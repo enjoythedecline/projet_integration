@@ -22,108 +22,108 @@
 
 (defclass projetIntegration::AddTwoIntsRequest
   :super ros::object
-  :slots (_a _b _c ))
+  :slots (_A _B _C ))
 
 (defmethod projetIntegration::AddTwoIntsRequest
   (:init
    (&key
-    ((:a __a) (instance geometry_msgs::Point :init))
-    ((:b __b) (instance geometry_msgs::Point :init))
-    ((:c __c) (instance geometry_msgs::Point :init))
+    ((:A __A) (instance geometry_msgs::Point :init))
+    ((:B __B) (instance geometry_msgs::Point :init))
+    ((:C __C) (instance geometry_msgs::Point :init))
     )
    (send-super :init)
-   (setq _a __a)
-   (setq _b __b)
-   (setq _c __c)
+   (setq _A __A)
+   (setq _B __B)
+   (setq _C __C)
    self)
-  (:a
-   (&rest __a)
-   (if (keywordp (car __a))
-       (send* _a __a)
+  (:A
+   (&rest __A)
+   (if (keywordp (car __A))
+       (send* _A __A)
      (progn
-       (if __a (setq _a (car __a)))
-       _a)))
-  (:b
-   (&rest __b)
-   (if (keywordp (car __b))
-       (send* _b __b)
+       (if __A (setq _A (car __A)))
+       _A)))
+  (:B
+   (&rest __B)
+   (if (keywordp (car __B))
+       (send* _B __B)
      (progn
-       (if __b (setq _b (car __b)))
-       _b)))
-  (:c
-   (&rest __c)
-   (if (keywordp (car __c))
-       (send* _c __c)
+       (if __B (setq _B (car __B)))
+       _B)))
+  (:C
+   (&rest __C)
+   (if (keywordp (car __C))
+       (send* _C __C)
      (progn
-       (if __c (setq _c (car __c)))
-       _c)))
+       (if __C (setq _C (car __C)))
+       _C)))
   (:serialization-length
    ()
    (+
-    ;; geometry_msgs/Point _a
-    (send _a :serialization-length)
-    ;; geometry_msgs/Point _b
-    (send _b :serialization-length)
-    ;; geometry_msgs/Point _c
-    (send _c :serialization-length)
+    ;; geometry_msgs/Point _A
+    (send _A :serialization-length)
+    ;; geometry_msgs/Point _B
+    (send _B :serialization-length)
+    ;; geometry_msgs/Point _C
+    (send _C :serialization-length)
     ))
   (:serialize
    (&optional strm)
    (let ((s (if strm strm
               (make-string-output-stream (send self :serialization-length)))))
-     ;; geometry_msgs/Point _a
-       (send _a :serialize s)
-     ;; geometry_msgs/Point _b
-       (send _b :serialize s)
-     ;; geometry_msgs/Point _c
-       (send _c :serialize s)
+     ;; geometry_msgs/Point _A
+       (send _A :serialize s)
+     ;; geometry_msgs/Point _B
+       (send _B :serialize s)
+     ;; geometry_msgs/Point _C
+       (send _C :serialize s)
      ;;
      (if (null strm) (get-output-stream-string s))))
   (:deserialize
    (buf &optional (ptr- 0))
-   ;; geometry_msgs/Point _a
-     (send _a :deserialize buf ptr-) (incf ptr- (send _a :serialization-length))
-   ;; geometry_msgs/Point _b
-     (send _b :deserialize buf ptr-) (incf ptr- (send _b :serialization-length))
-   ;; geometry_msgs/Point _c
-     (send _c :deserialize buf ptr-) (incf ptr- (send _c :serialization-length))
+   ;; geometry_msgs/Point _A
+     (send _A :deserialize buf ptr-) (incf ptr- (send _A :serialization-length))
+   ;; geometry_msgs/Point _B
+     (send _B :deserialize buf ptr-) (incf ptr- (send _B :serialization-length))
+   ;; geometry_msgs/Point _C
+     (send _C :deserialize buf ptr-) (incf ptr- (send _C :serialization-length))
    ;;
    self)
   )
 
 (defclass projetIntegration::AddTwoIntsResponse
   :super ros::object
-  :slots (_area ))
+  :slots (_Area ))
 
 (defmethod projetIntegration::AddTwoIntsResponse
   (:init
    (&key
-    ((:area __area) 0)
+    ((:Area __Area) 0.0)
     )
    (send-super :init)
-   (setq _area (round __area))
+   (setq _Area (float __Area))
    self)
-  (:area
-   (&optional __area)
-   (if __area (setq _area __area)) _area)
+  (:Area
+   (&optional __Area)
+   (if __Area (setq _Area __Area)) _Area)
   (:serialization-length
    ()
    (+
-    ;; int32 _area
-    4
+    ;; float64 _Area
+    8
     ))
   (:serialize
    (&optional strm)
    (let ((s (if strm strm
               (make-string-output-stream (send self :serialization-length)))))
-     ;; int32 _area
-       (write-long _area s)
+     ;; float64 _Area
+       (sys::poke _Area (send s :buffer) (send s :count) :double) (incf (stream-count s) 8)
      ;;
      (if (null strm) (get-output-stream-string s))))
   (:deserialize
    (buf &optional (ptr- 0))
-   ;; int32 _area
-     (setq _area (sys::peek buf ptr- :integer)) (incf ptr- 4)
+   ;; float64 _Area
+     (setq _Area (sys::peek buf ptr- :double)) (incf ptr- 8)
    ;;
    self)
   )
@@ -132,7 +132,7 @@
   :super ros::object
   :slots ())
 
-(setf (get projetIntegration::AddTwoInts :md5sum-) "5b7e297ec17d89dc92e7ddef62dccb0a")
+(setf (get projetIntegration::AddTwoInts :md5sum-) "3f47460a81c2a1a827aa1d7fe37c3569")
 (setf (get projetIntegration::AddTwoInts :datatype-) "projetIntegration/AddTwoInts")
 (setf (get projetIntegration::AddTwoInts :request) projetIntegration::AddTwoIntsRequest)
 (setf (get projetIntegration::AddTwoInts :response) projetIntegration::AddTwoIntsResponse)
@@ -140,12 +140,12 @@
 (defmethod projetIntegration::AddTwoIntsRequest
   (:response () (instance projetIntegration::AddTwoIntsResponse :init)))
 
-(setf (get projetIntegration::AddTwoIntsRequest :md5sum-) "5b7e297ec17d89dc92e7ddef62dccb0a")
+(setf (get projetIntegration::AddTwoIntsRequest :md5sum-) "3f47460a81c2a1a827aa1d7fe37c3569")
 (setf (get projetIntegration::AddTwoIntsRequest :datatype-) "projetIntegration/AddTwoIntsRequest")
 (setf (get projetIntegration::AddTwoIntsRequest :definition-)
-      "geometry_msgs/Point a
-geometry_msgs/Point b
-geometry_msgs/Point c
+      "geometry_msgs/Point A
+geometry_msgs/Point B
+geometry_msgs/Point C
 
 ================================================================================
 MSG: geometry_msgs/Point
@@ -154,16 +154,16 @@ float64 x
 float64 y
 float64 z
 ---
-int32 area
+float64 Area
 
 ")
 
-(setf (get projetIntegration::AddTwoIntsResponse :md5sum-) "5b7e297ec17d89dc92e7ddef62dccb0a")
+(setf (get projetIntegration::AddTwoIntsResponse :md5sum-) "3f47460a81c2a1a827aa1d7fe37c3569")
 (setf (get projetIntegration::AddTwoIntsResponse :datatype-) "projetIntegration/AddTwoIntsResponse")
 (setf (get projetIntegration::AddTwoIntsResponse :definition-)
-      "geometry_msgs/Point a
-geometry_msgs/Point b
-geometry_msgs/Point c
+      "geometry_msgs/Point A
+geometry_msgs/Point B
+geometry_msgs/Point C
 
 ================================================================================
 MSG: geometry_msgs/Point
@@ -172,12 +172,12 @@ float64 x
 float64 y
 float64 z
 ---
-int32 area
+float64 Area
 
 ")
 
 
 
-(provide :projetIntegration/AddTwoInts "5b7e297ec17d89dc92e7ddef62dccb0a")
+(provide :projetIntegration/AddTwoInts "3f47460a81c2a1a827aa1d7fe37c3569")
 
 

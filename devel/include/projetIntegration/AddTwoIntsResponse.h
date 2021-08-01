@@ -24,17 +24,17 @@ struct AddTwoIntsResponse_
   typedef AddTwoIntsResponse_<ContainerAllocator> Type;
 
   AddTwoIntsResponse_()
-    : area(0)  {
+    : Area(0.0)  {
     }
   AddTwoIntsResponse_(const ContainerAllocator& _alloc)
-    : area(0)  {
+    : Area(0.0)  {
   (void)_alloc;
     }
 
 
 
-   typedef int32_t _area_type;
-  _area_type area;
+   typedef double _Area_type;
+  _Area_type Area;
 
 
 
@@ -65,7 +65,7 @@ return s;
 template<typename ContainerAllocator1, typename ContainerAllocator2>
 bool operator==(const ::projetIntegration::AddTwoIntsResponse_<ContainerAllocator1> & lhs, const ::projetIntegration::AddTwoIntsResponse_<ContainerAllocator2> & rhs)
 {
-  return lhs.area == rhs.area;
+  return lhs.Area == rhs.Area;
 }
 
 template<typename ContainerAllocator1, typename ContainerAllocator2>
@@ -122,12 +122,12 @@ struct MD5Sum< ::projetIntegration::AddTwoIntsResponse_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "6f6af7c0004b76d2160e3d1abb2fbee2";
+    return "7aa66f1c1fef1449865af97d0b50f643";
   }
 
   static const char* value(const ::projetIntegration::AddTwoIntsResponse_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x6f6af7c0004b76d2ULL;
-  static const uint64_t static_value2 = 0x160e3d1abb2fbee2ULL;
+  static const uint64_t static_value1 = 0x7aa66f1c1fef1449ULL;
+  static const uint64_t static_value2 = 0x865af97d0b50f643ULL;
 };
 
 template<class ContainerAllocator>
@@ -146,7 +146,7 @@ struct Definition< ::projetIntegration::AddTwoIntsResponse_<ContainerAllocator> 
 {
   static const char* value()
   {
-    return "int32 area\n"
+    return "float64 Area\n"
 "\n"
 ;
   }
@@ -166,7 +166,7 @@ namespace serialization
   {
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
-      stream.next(m.area);
+      stream.next(m.Area);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -185,8 +185,8 @@ struct Printer< ::projetIntegration::AddTwoIntsResponse_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::projetIntegration::AddTwoIntsResponse_<ContainerAllocator>& v)
   {
-    s << indent << "area: ";
-    Printer<int32_t>::stream(s, indent + "  ", v.area);
+    s << indent << "Area: ";
+    Printer<double>::stream(s, indent + "  ", v.Area);
   }
 };
 

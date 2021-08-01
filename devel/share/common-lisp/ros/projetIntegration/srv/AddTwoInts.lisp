@@ -7,19 +7,19 @@
 ;//! \htmlinclude AddTwoInts-request.msg.html
 
 (cl:defclass <AddTwoInts-request> (roslisp-msg-protocol:ros-message)
-  ((a
-    :reader a
-    :initarg :a
+  ((A
+    :reader A
+    :initarg :A
     :type geometry_msgs-msg:Point
     :initform (cl:make-instance 'geometry_msgs-msg:Point))
-   (b
-    :reader b
-    :initarg :b
+   (B
+    :reader B
+    :initarg :B
     :type geometry_msgs-msg:Point
     :initform (cl:make-instance 'geometry_msgs-msg:Point))
-   (c
-    :reader c
-    :initarg :c
+   (C
+    :reader C
+    :initarg :C
     :type geometry_msgs-msg:Point
     :initform (cl:make-instance 'geometry_msgs-msg:Point)))
 )
@@ -32,31 +32,31 @@
   (cl:unless (cl:typep m 'AddTwoInts-request)
     (roslisp-msg-protocol:msg-deprecation-warning "using old message class name projetIntegration-srv:<AddTwoInts-request> is deprecated: use projetIntegration-srv:AddTwoInts-request instead.")))
 
-(cl:ensure-generic-function 'a-val :lambda-list '(m))
-(cl:defmethod a-val ((m <AddTwoInts-request>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader projetIntegration-srv:a-val is deprecated.  Use projetIntegration-srv:a instead.")
-  (a m))
+(cl:ensure-generic-function 'A-val :lambda-list '(m))
+(cl:defmethod A-val ((m <AddTwoInts-request>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader projetIntegration-srv:A-val is deprecated.  Use projetIntegration-srv:A instead.")
+  (A m))
 
-(cl:ensure-generic-function 'b-val :lambda-list '(m))
-(cl:defmethod b-val ((m <AddTwoInts-request>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader projetIntegration-srv:b-val is deprecated.  Use projetIntegration-srv:b instead.")
-  (b m))
+(cl:ensure-generic-function 'B-val :lambda-list '(m))
+(cl:defmethod B-val ((m <AddTwoInts-request>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader projetIntegration-srv:B-val is deprecated.  Use projetIntegration-srv:B instead.")
+  (B m))
 
-(cl:ensure-generic-function 'c-val :lambda-list '(m))
-(cl:defmethod c-val ((m <AddTwoInts-request>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader projetIntegration-srv:c-val is deprecated.  Use projetIntegration-srv:c instead.")
-  (c m))
+(cl:ensure-generic-function 'C-val :lambda-list '(m))
+(cl:defmethod C-val ((m <AddTwoInts-request>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader projetIntegration-srv:C-val is deprecated.  Use projetIntegration-srv:C instead.")
+  (C m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <AddTwoInts-request>) ostream)
   "Serializes a message object of type '<AddTwoInts-request>"
-  (roslisp-msg-protocol:serialize (cl:slot-value msg 'a) ostream)
-  (roslisp-msg-protocol:serialize (cl:slot-value msg 'b) ostream)
-  (roslisp-msg-protocol:serialize (cl:slot-value msg 'c) ostream)
+  (roslisp-msg-protocol:serialize (cl:slot-value msg 'A) ostream)
+  (roslisp-msg-protocol:serialize (cl:slot-value msg 'B) ostream)
+  (roslisp-msg-protocol:serialize (cl:slot-value msg 'C) ostream)
 )
 (cl:defmethod roslisp-msg-protocol:deserialize ((msg <AddTwoInts-request>) istream)
   "Deserializes a message object of type '<AddTwoInts-request>"
-  (roslisp-msg-protocol:deserialize (cl:slot-value msg 'a) istream)
-  (roslisp-msg-protocol:deserialize (cl:slot-value msg 'b) istream)
-  (roslisp-msg-protocol:deserialize (cl:slot-value msg 'c) istream)
+  (roslisp-msg-protocol:deserialize (cl:slot-value msg 'A) istream)
+  (roslisp-msg-protocol:deserialize (cl:slot-value msg 'B) istream)
+  (roslisp-msg-protocol:deserialize (cl:slot-value msg 'C) istream)
   msg
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<AddTwoInts-request>)))
@@ -67,37 +67,37 @@
   "projetIntegration/AddTwoIntsRequest")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<AddTwoInts-request>)))
   "Returns md5sum for a message object of type '<AddTwoInts-request>"
-  "5b7e297ec17d89dc92e7ddef62dccb0a")
+  "3f47460a81c2a1a827aa1d7fe37c3569")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'AddTwoInts-request)))
   "Returns md5sum for a message object of type 'AddTwoInts-request"
-  "5b7e297ec17d89dc92e7ddef62dccb0a")
+  "3f47460a81c2a1a827aa1d7fe37c3569")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<AddTwoInts-request>)))
   "Returns full string definition for message of type '<AddTwoInts-request>"
-  (cl:format cl:nil "geometry_msgs/Point a~%geometry_msgs/Point b~%geometry_msgs/Point c~%~%================================================================================~%MSG: geometry_msgs/Point~%# This contains the position of a point in free space~%float64 x~%float64 y~%float64 z~%~%~%"))
+  (cl:format cl:nil "geometry_msgs/Point A~%geometry_msgs/Point B~%geometry_msgs/Point C~%~%================================================================================~%MSG: geometry_msgs/Point~%# This contains the position of a point in free space~%float64 x~%float64 y~%float64 z~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'AddTwoInts-request)))
   "Returns full string definition for message of type 'AddTwoInts-request"
-  (cl:format cl:nil "geometry_msgs/Point a~%geometry_msgs/Point b~%geometry_msgs/Point c~%~%================================================================================~%MSG: geometry_msgs/Point~%# This contains the position of a point in free space~%float64 x~%float64 y~%float64 z~%~%~%"))
+  (cl:format cl:nil "geometry_msgs/Point A~%geometry_msgs/Point B~%geometry_msgs/Point C~%~%================================================================================~%MSG: geometry_msgs/Point~%# This contains the position of a point in free space~%float64 x~%float64 y~%float64 z~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <AddTwoInts-request>))
   (cl:+ 0
-     (roslisp-msg-protocol:serialization-length (cl:slot-value msg 'a))
-     (roslisp-msg-protocol:serialization-length (cl:slot-value msg 'b))
-     (roslisp-msg-protocol:serialization-length (cl:slot-value msg 'c))
+     (roslisp-msg-protocol:serialization-length (cl:slot-value msg 'A))
+     (roslisp-msg-protocol:serialization-length (cl:slot-value msg 'B))
+     (roslisp-msg-protocol:serialization-length (cl:slot-value msg 'C))
 ))
 (cl:defmethod roslisp-msg-protocol:ros-message-to-list ((msg <AddTwoInts-request>))
   "Converts a ROS message object to a list"
   (cl:list 'AddTwoInts-request
-    (cl:cons ':a (a msg))
-    (cl:cons ':b (b msg))
-    (cl:cons ':c (c msg))
+    (cl:cons ':A (A msg))
+    (cl:cons ':B (B msg))
+    (cl:cons ':C (C msg))
 ))
 ;//! \htmlinclude AddTwoInts-response.msg.html
 
 (cl:defclass <AddTwoInts-response> (roslisp-msg-protocol:ros-message)
-  ((area
-    :reader area
-    :initarg :area
-    :type cl:integer
-    :initform 0))
+  ((Area
+    :reader Area
+    :initarg :Area
+    :type cl:float
+    :initform 0.0))
 )
 
 (cl:defclass AddTwoInts-response (<AddTwoInts-response>)
@@ -108,27 +108,34 @@
   (cl:unless (cl:typep m 'AddTwoInts-response)
     (roslisp-msg-protocol:msg-deprecation-warning "using old message class name projetIntegration-srv:<AddTwoInts-response> is deprecated: use projetIntegration-srv:AddTwoInts-response instead.")))
 
-(cl:ensure-generic-function 'area-val :lambda-list '(m))
-(cl:defmethod area-val ((m <AddTwoInts-response>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader projetIntegration-srv:area-val is deprecated.  Use projetIntegration-srv:area instead.")
-  (area m))
+(cl:ensure-generic-function 'Area-val :lambda-list '(m))
+(cl:defmethod Area-val ((m <AddTwoInts-response>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader projetIntegration-srv:Area-val is deprecated.  Use projetIntegration-srv:Area instead.")
+  (Area m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <AddTwoInts-response>) ostream)
   "Serializes a message object of type '<AddTwoInts-response>"
-  (cl:let* ((signed (cl:slot-value msg 'area)) (unsigned (cl:if (cl:< signed 0) (cl:+ signed 4294967296) signed)))
-    (cl:write-byte (cl:ldb (cl:byte 8 0) unsigned) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 8) unsigned) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 16) unsigned) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 24) unsigned) ostream)
-    )
+  (cl:let ((bits (roslisp-utils:encode-double-float-bits (cl:slot-value msg 'Area))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 32) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 40) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 48) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 56) bits) ostream))
 )
 (cl:defmethod roslisp-msg-protocol:deserialize ((msg <AddTwoInts-response>) istream)
   "Deserializes a message object of type '<AddTwoInts-response>"
-    (cl:let ((unsigned 0))
-      (cl:setf (cl:ldb (cl:byte 8 0) unsigned) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 8) unsigned) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 16) unsigned) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 24) unsigned) (cl:read-byte istream))
-      (cl:setf (cl:slot-value msg 'area) (cl:if (cl:< unsigned 2147483648) unsigned (cl:- unsigned 4294967296))))
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 32) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 40) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 48) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 56) bits) (cl:read-byte istream))
+    (cl:setf (cl:slot-value msg 'Area) (roslisp-utils:decode-double-float-bits bits)))
   msg
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<AddTwoInts-response>)))
@@ -139,24 +146,24 @@
   "projetIntegration/AddTwoIntsResponse")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<AddTwoInts-response>)))
   "Returns md5sum for a message object of type '<AddTwoInts-response>"
-  "5b7e297ec17d89dc92e7ddef62dccb0a")
+  "3f47460a81c2a1a827aa1d7fe37c3569")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'AddTwoInts-response)))
   "Returns md5sum for a message object of type 'AddTwoInts-response"
-  "5b7e297ec17d89dc92e7ddef62dccb0a")
+  "3f47460a81c2a1a827aa1d7fe37c3569")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<AddTwoInts-response>)))
   "Returns full string definition for message of type '<AddTwoInts-response>"
-  (cl:format cl:nil "int32 area~%~%~%~%"))
+  (cl:format cl:nil "float64 Area~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'AddTwoInts-response)))
   "Returns full string definition for message of type 'AddTwoInts-response"
-  (cl:format cl:nil "int32 area~%~%~%~%"))
+  (cl:format cl:nil "float64 Area~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <AddTwoInts-response>))
   (cl:+ 0
-     4
+     8
 ))
 (cl:defmethod roslisp-msg-protocol:ros-message-to-list ((msg <AddTwoInts-response>))
   "Converts a ROS message object to a list"
   (cl:list 'AddTwoInts-response
-    (cl:cons ':area (area msg))
+    (cl:cons ':Area (Area msg))
 ))
 (cl:defmethod roslisp-msg-protocol:service-request-type ((msg (cl:eql 'AddTwoInts)))
   'AddTwoInts-request)

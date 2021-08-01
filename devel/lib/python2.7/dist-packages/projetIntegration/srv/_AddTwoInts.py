@@ -9,12 +9,12 @@ import struct
 import geometry_msgs.msg
 
 class AddTwoIntsRequest(genpy.Message):
-  _md5sum = "0bf2c340f83e19c1d92952bd4b83eab3"
+  _md5sum = "8a86b0074913850e005da918913d11e8"
   _type = "projetIntegration/AddTwoIntsRequest"
   _has_header = False  # flag to mark the presence of a Header object
-  _full_text = """geometry_msgs/Point a
-geometry_msgs/Point b
-geometry_msgs/Point c
+  _full_text = """geometry_msgs/Point A
+geometry_msgs/Point B
+geometry_msgs/Point C
 
 ================================================================================
 MSG: geometry_msgs/Point
@@ -23,7 +23,7 @@ float64 x
 float64 y
 float64 z
 """
-  __slots__ = ['a','b','c']
+  __slots__ = ['A','B','C']
   _slot_types = ['geometry_msgs/Point','geometry_msgs/Point','geometry_msgs/Point']
 
   def __init__(self, *args, **kwds):
@@ -34,7 +34,7 @@ float64 z
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       a,b,c
+       A,B,C
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -43,16 +43,16 @@ float64 z
     if args or kwds:
       super(AddTwoIntsRequest, self).__init__(*args, **kwds)
       # message fields cannot be None, assign default values for those that are
-      if self.a is None:
-        self.a = geometry_msgs.msg.Point()
-      if self.b is None:
-        self.b = geometry_msgs.msg.Point()
-      if self.c is None:
-        self.c = geometry_msgs.msg.Point()
+      if self.A is None:
+        self.A = geometry_msgs.msg.Point()
+      if self.B is None:
+        self.B = geometry_msgs.msg.Point()
+      if self.C is None:
+        self.C = geometry_msgs.msg.Point()
     else:
-      self.a = geometry_msgs.msg.Point()
-      self.b = geometry_msgs.msg.Point()
-      self.c = geometry_msgs.msg.Point()
+      self.A = geometry_msgs.msg.Point()
+      self.B = geometry_msgs.msg.Point()
+      self.C = geometry_msgs.msg.Point()
 
   def _get_types(self):
     """
@@ -67,7 +67,7 @@ float64 z
     """
     try:
       _x = self
-      buff.write(_get_struct_9d().pack(_x.a.x, _x.a.y, _x.a.z, _x.b.x, _x.b.y, _x.b.z, _x.c.x, _x.c.y, _x.c.z))
+      buff.write(_get_struct_9d().pack(_x.A.x, _x.A.y, _x.A.z, _x.B.x, _x.B.y, _x.B.z, _x.C.x, _x.C.y, _x.C.z))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -79,17 +79,17 @@ float64 z
     if python3:
       codecs.lookup_error("rosmsg").msg_type = self._type
     try:
-      if self.a is None:
-        self.a = geometry_msgs.msg.Point()
-      if self.b is None:
-        self.b = geometry_msgs.msg.Point()
-      if self.c is None:
-        self.c = geometry_msgs.msg.Point()
+      if self.A is None:
+        self.A = geometry_msgs.msg.Point()
+      if self.B is None:
+        self.B = geometry_msgs.msg.Point()
+      if self.C is None:
+        self.C = geometry_msgs.msg.Point()
       end = 0
       _x = self
       start = end
       end += 72
-      (_x.a.x, _x.a.y, _x.a.z, _x.b.x, _x.b.y, _x.b.z, _x.c.x, _x.c.y, _x.c.z,) = _get_struct_9d().unpack(str[start:end])
+      (_x.A.x, _x.A.y, _x.A.z, _x.B.x, _x.B.y, _x.B.z, _x.C.x, _x.C.y, _x.C.z,) = _get_struct_9d().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -103,7 +103,7 @@ float64 z
     """
     try:
       _x = self
-      buff.write(_get_struct_9d().pack(_x.a.x, _x.a.y, _x.a.z, _x.b.x, _x.b.y, _x.b.z, _x.c.x, _x.c.y, _x.c.z))
+      buff.write(_get_struct_9d().pack(_x.A.x, _x.A.y, _x.A.z, _x.B.x, _x.B.y, _x.B.z, _x.C.x, _x.C.y, _x.C.z))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -116,17 +116,17 @@ float64 z
     if python3:
       codecs.lookup_error("rosmsg").msg_type = self._type
     try:
-      if self.a is None:
-        self.a = geometry_msgs.msg.Point()
-      if self.b is None:
-        self.b = geometry_msgs.msg.Point()
-      if self.c is None:
-        self.c = geometry_msgs.msg.Point()
+      if self.A is None:
+        self.A = geometry_msgs.msg.Point()
+      if self.B is None:
+        self.B = geometry_msgs.msg.Point()
+      if self.C is None:
+        self.C = geometry_msgs.msg.Point()
       end = 0
       _x = self
       start = end
       end += 72
-      (_x.a.x, _x.a.y, _x.a.z, _x.b.x, _x.b.y, _x.b.z, _x.c.x, _x.c.y, _x.c.z,) = _get_struct_9d().unpack(str[start:end])
+      (_x.A.x, _x.A.y, _x.A.z, _x.B.x, _x.B.y, _x.B.z, _x.C.x, _x.C.y, _x.C.z,) = _get_struct_9d().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -151,14 +151,14 @@ import struct
 
 
 class AddTwoIntsResponse(genpy.Message):
-  _md5sum = "6f6af7c0004b76d2160e3d1abb2fbee2"
+  _md5sum = "7aa66f1c1fef1449865af97d0b50f643"
   _type = "projetIntegration/AddTwoIntsResponse"
   _has_header = False  # flag to mark the presence of a Header object
-  _full_text = """int32 area
+  _full_text = """float64 Area
 
 """
-  __slots__ = ['area']
-  _slot_types = ['int32']
+  __slots__ = ['Area']
+  _slot_types = ['float64']
 
   def __init__(self, *args, **kwds):
     """
@@ -168,7 +168,7 @@ class AddTwoIntsResponse(genpy.Message):
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       area
+       Area
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -177,10 +177,10 @@ class AddTwoIntsResponse(genpy.Message):
     if args or kwds:
       super(AddTwoIntsResponse, self).__init__(*args, **kwds)
       # message fields cannot be None, assign default values for those that are
-      if self.area is None:
-        self.area = 0
+      if self.Area is None:
+        self.Area = 0.
     else:
-      self.area = 0
+      self.Area = 0.
 
   def _get_types(self):
     """
@@ -194,8 +194,8 @@ class AddTwoIntsResponse(genpy.Message):
     :param buff: buffer, ``StringIO``
     """
     try:
-      _x = self.area
-      buff.write(_get_struct_i().pack(_x))
+      _x = self.Area
+      buff.write(_get_struct_d().pack(_x))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -209,8 +209,8 @@ class AddTwoIntsResponse(genpy.Message):
     try:
       end = 0
       start = end
-      end += 4
-      (self.area,) = _get_struct_i().unpack(str[start:end])
+      end += 8
+      (self.Area,) = _get_struct_d().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -223,8 +223,8 @@ class AddTwoIntsResponse(genpy.Message):
     :param numpy: numpy python module
     """
     try:
-      _x = self.area
-      buff.write(_get_struct_i().pack(_x))
+      _x = self.Area
+      buff.write(_get_struct_d().pack(_x))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -239,8 +239,8 @@ class AddTwoIntsResponse(genpy.Message):
     try:
       end = 0
       start = end
-      end += 4
-      (self.area,) = _get_struct_i().unpack(str[start:end])
+      end += 8
+      (self.Area,) = _get_struct_d().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -249,14 +249,14 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
-_struct_i = None
-def _get_struct_i():
-    global _struct_i
-    if _struct_i is None:
-        _struct_i = struct.Struct("<i")
-    return _struct_i
+_struct_d = None
+def _get_struct_d():
+    global _struct_d
+    if _struct_d is None:
+        _struct_d = struct.Struct("<d")
+    return _struct_d
 class AddTwoInts(object):
   _type          = 'projetIntegration/AddTwoInts'
-  _md5sum = '5b7e297ec17d89dc92e7ddef62dccb0a'
+  _md5sum = '3f47460a81c2a1a827aa1d7fe37c3569'
   _request_class  = AddTwoIntsRequest
   _response_class = AddTwoIntsResponse

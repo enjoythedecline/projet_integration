@@ -22,40 +22,40 @@ class AddTwoIntsRequest {
   constructor(initObj={}) {
     if (initObj === null) {
       // initObj === null is a special case for deserialization where we don't initialize fields
-      this.a = null;
-      this.b = null;
-      this.c = null;
+      this.A = null;
+      this.B = null;
+      this.C = null;
     }
     else {
-      if (initObj.hasOwnProperty('a')) {
-        this.a = initObj.a
+      if (initObj.hasOwnProperty('A')) {
+        this.A = initObj.A
       }
       else {
-        this.a = new geometry_msgs.msg.Point();
+        this.A = new geometry_msgs.msg.Point();
       }
-      if (initObj.hasOwnProperty('b')) {
-        this.b = initObj.b
-      }
-      else {
-        this.b = new geometry_msgs.msg.Point();
-      }
-      if (initObj.hasOwnProperty('c')) {
-        this.c = initObj.c
+      if (initObj.hasOwnProperty('B')) {
+        this.B = initObj.B
       }
       else {
-        this.c = new geometry_msgs.msg.Point();
+        this.B = new geometry_msgs.msg.Point();
+      }
+      if (initObj.hasOwnProperty('C')) {
+        this.C = initObj.C
+      }
+      else {
+        this.C = new geometry_msgs.msg.Point();
       }
     }
   }
 
   static serialize(obj, buffer, bufferOffset) {
     // Serializes a message object of type AddTwoIntsRequest
-    // Serialize message field [a]
-    bufferOffset = geometry_msgs.msg.Point.serialize(obj.a, buffer, bufferOffset);
-    // Serialize message field [b]
-    bufferOffset = geometry_msgs.msg.Point.serialize(obj.b, buffer, bufferOffset);
-    // Serialize message field [c]
-    bufferOffset = geometry_msgs.msg.Point.serialize(obj.c, buffer, bufferOffset);
+    // Serialize message field [A]
+    bufferOffset = geometry_msgs.msg.Point.serialize(obj.A, buffer, bufferOffset);
+    // Serialize message field [B]
+    bufferOffset = geometry_msgs.msg.Point.serialize(obj.B, buffer, bufferOffset);
+    // Serialize message field [C]
+    bufferOffset = geometry_msgs.msg.Point.serialize(obj.C, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -63,12 +63,12 @@ class AddTwoIntsRequest {
     //deserializes a message object of type AddTwoIntsRequest
     let len;
     let data = new AddTwoIntsRequest(null);
-    // Deserialize message field [a]
-    data.a = geometry_msgs.msg.Point.deserialize(buffer, bufferOffset);
-    // Deserialize message field [b]
-    data.b = geometry_msgs.msg.Point.deserialize(buffer, bufferOffset);
-    // Deserialize message field [c]
-    data.c = geometry_msgs.msg.Point.deserialize(buffer, bufferOffset);
+    // Deserialize message field [A]
+    data.A = geometry_msgs.msg.Point.deserialize(buffer, bufferOffset);
+    // Deserialize message field [B]
+    data.B = geometry_msgs.msg.Point.deserialize(buffer, bufferOffset);
+    // Deserialize message field [C]
+    data.C = geometry_msgs.msg.Point.deserialize(buffer, bufferOffset);
     return data;
   }
 
@@ -83,15 +83,15 @@ class AddTwoIntsRequest {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '0bf2c340f83e19c1d92952bd4b83eab3';
+    return '8a86b0074913850e005da918913d11e8';
   }
 
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    geometry_msgs/Point a
-    geometry_msgs/Point b
-    geometry_msgs/Point c
+    geometry_msgs/Point A
+    geometry_msgs/Point B
+    geometry_msgs/Point C
     
     ================================================================================
     MSG: geometry_msgs/Point
@@ -109,25 +109,25 @@ class AddTwoIntsRequest {
       msg = {};
     }
     const resolved = new AddTwoIntsRequest(null);
-    if (msg.a !== undefined) {
-      resolved.a = geometry_msgs.msg.Point.Resolve(msg.a)
+    if (msg.A !== undefined) {
+      resolved.A = geometry_msgs.msg.Point.Resolve(msg.A)
     }
     else {
-      resolved.a = new geometry_msgs.msg.Point()
+      resolved.A = new geometry_msgs.msg.Point()
     }
 
-    if (msg.b !== undefined) {
-      resolved.b = geometry_msgs.msg.Point.Resolve(msg.b)
+    if (msg.B !== undefined) {
+      resolved.B = geometry_msgs.msg.Point.Resolve(msg.B)
     }
     else {
-      resolved.b = new geometry_msgs.msg.Point()
+      resolved.B = new geometry_msgs.msg.Point()
     }
 
-    if (msg.c !== undefined) {
-      resolved.c = geometry_msgs.msg.Point.Resolve(msg.c)
+    if (msg.C !== undefined) {
+      resolved.C = geometry_msgs.msg.Point.Resolve(msg.C)
     }
     else {
-      resolved.c = new geometry_msgs.msg.Point()
+      resolved.C = new geometry_msgs.msg.Point()
     }
 
     return resolved;
@@ -138,22 +138,22 @@ class AddTwoIntsResponse {
   constructor(initObj={}) {
     if (initObj === null) {
       // initObj === null is a special case for deserialization where we don't initialize fields
-      this.area = null;
+      this.Area = null;
     }
     else {
-      if (initObj.hasOwnProperty('area')) {
-        this.area = initObj.area
+      if (initObj.hasOwnProperty('Area')) {
+        this.Area = initObj.Area
       }
       else {
-        this.area = 0;
+        this.Area = 0.0;
       }
     }
   }
 
   static serialize(obj, buffer, bufferOffset) {
     // Serializes a message object of type AddTwoIntsResponse
-    // Serialize message field [area]
-    bufferOffset = _serializer.int32(obj.area, buffer, bufferOffset);
+    // Serialize message field [Area]
+    bufferOffset = _serializer.float64(obj.Area, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -161,13 +161,13 @@ class AddTwoIntsResponse {
     //deserializes a message object of type AddTwoIntsResponse
     let len;
     let data = new AddTwoIntsResponse(null);
-    // Deserialize message field [area]
-    data.area = _deserializer.int32(buffer, bufferOffset);
+    // Deserialize message field [Area]
+    data.Area = _deserializer.float64(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
-    return 4;
+    return 8;
   }
 
   static datatype() {
@@ -177,13 +177,13 @@ class AddTwoIntsResponse {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '6f6af7c0004b76d2160e3d1abb2fbee2';
+    return '7aa66f1c1fef1449865af97d0b50f643';
   }
 
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    int32 area
+    float64 Area
     
     
     `;
@@ -195,11 +195,11 @@ class AddTwoIntsResponse {
       msg = {};
     }
     const resolved = new AddTwoIntsResponse(null);
-    if (msg.area !== undefined) {
-      resolved.area = msg.area;
+    if (msg.Area !== undefined) {
+      resolved.Area = msg.Area;
     }
     else {
-      resolved.area = 0
+      resolved.Area = 0.0
     }
 
     return resolved;
@@ -209,6 +209,6 @@ class AddTwoIntsResponse {
 module.exports = {
   Request: AddTwoIntsRequest,
   Response: AddTwoIntsResponse,
-  md5sum() { return '5b7e297ec17d89dc92e7ddef62dccb0a'; },
+  md5sum() { return '3f47460a81c2a1a827aa1d7fe37c3569'; },
   datatype() { return 'projetIntegration/AddTwoInts'; }
 };

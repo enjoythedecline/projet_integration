@@ -27,27 +27,27 @@ struct AddTwoIntsRequest_
   typedef AddTwoIntsRequest_<ContainerAllocator> Type;
 
   AddTwoIntsRequest_()
-    : a()
-    , b()
-    , c()  {
+    : A()
+    , B()
+    , C()  {
     }
   AddTwoIntsRequest_(const ContainerAllocator& _alloc)
-    : a(_alloc)
-    , b(_alloc)
-    , c(_alloc)  {
+    : A(_alloc)
+    , B(_alloc)
+    , C(_alloc)  {
   (void)_alloc;
     }
 
 
 
-   typedef  ::geometry_msgs::Point_<ContainerAllocator>  _a_type;
-  _a_type a;
+   typedef  ::geometry_msgs::Point_<ContainerAllocator>  _A_type;
+  _A_type A;
 
-   typedef  ::geometry_msgs::Point_<ContainerAllocator>  _b_type;
-  _b_type b;
+   typedef  ::geometry_msgs::Point_<ContainerAllocator>  _B_type;
+  _B_type B;
 
-   typedef  ::geometry_msgs::Point_<ContainerAllocator>  _c_type;
-  _c_type c;
+   typedef  ::geometry_msgs::Point_<ContainerAllocator>  _C_type;
+  _C_type C;
 
 
 
@@ -78,9 +78,9 @@ return s;
 template<typename ContainerAllocator1, typename ContainerAllocator2>
 bool operator==(const ::projetIntegration::AddTwoIntsRequest_<ContainerAllocator1> & lhs, const ::projetIntegration::AddTwoIntsRequest_<ContainerAllocator2> & rhs)
 {
-  return lhs.a == rhs.a &&
-    lhs.b == rhs.b &&
-    lhs.c == rhs.c;
+  return lhs.A == rhs.A &&
+    lhs.B == rhs.B &&
+    lhs.C == rhs.C;
 }
 
 template<typename ContainerAllocator1, typename ContainerAllocator2>
@@ -137,12 +137,12 @@ struct MD5Sum< ::projetIntegration::AddTwoIntsRequest_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "0bf2c340f83e19c1d92952bd4b83eab3";
+    return "8a86b0074913850e005da918913d11e8";
   }
 
   static const char* value(const ::projetIntegration::AddTwoIntsRequest_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x0bf2c340f83e19c1ULL;
-  static const uint64_t static_value2 = 0xd92952bd4b83eab3ULL;
+  static const uint64_t static_value1 = 0x8a86b0074913850eULL;
+  static const uint64_t static_value2 = 0x005da918913d11e8ULL;
 };
 
 template<class ContainerAllocator>
@@ -161,9 +161,9 @@ struct Definition< ::projetIntegration::AddTwoIntsRequest_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "geometry_msgs/Point a\n"
-"geometry_msgs/Point b\n"
-"geometry_msgs/Point c\n"
+    return "geometry_msgs/Point A\n"
+"geometry_msgs/Point B\n"
+"geometry_msgs/Point C\n"
 "\n"
 "================================================================================\n"
 "MSG: geometry_msgs/Point\n"
@@ -189,9 +189,9 @@ namespace serialization
   {
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
-      stream.next(m.a);
-      stream.next(m.b);
-      stream.next(m.c);
+      stream.next(m.A);
+      stream.next(m.B);
+      stream.next(m.C);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -210,15 +210,15 @@ struct Printer< ::projetIntegration::AddTwoIntsRequest_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::projetIntegration::AddTwoIntsRequest_<ContainerAllocator>& v)
   {
-    s << indent << "a: ";
+    s << indent << "A: ";
     s << std::endl;
-    Printer< ::geometry_msgs::Point_<ContainerAllocator> >::stream(s, indent + "  ", v.a);
-    s << indent << "b: ";
+    Printer< ::geometry_msgs::Point_<ContainerAllocator> >::stream(s, indent + "  ", v.A);
+    s << indent << "B: ";
     s << std::endl;
-    Printer< ::geometry_msgs::Point_<ContainerAllocator> >::stream(s, indent + "  ", v.b);
-    s << indent << "c: ";
+    Printer< ::geometry_msgs::Point_<ContainerAllocator> >::stream(s, indent + "  ", v.B);
+    s << indent << "C: ";
     s << std::endl;
-    Printer< ::geometry_msgs::Point_<ContainerAllocator> >::stream(s, indent + "  ", v.c);
+    Printer< ::geometry_msgs::Point_<ContainerAllocator> >::stream(s, indent + "  ", v.C);
   }
 };
 
