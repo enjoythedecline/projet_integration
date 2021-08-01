@@ -29,7 +29,9 @@ int main(int argc, char **argv)
   ros::NodeHandle n;
   ros::ServiceClient client = n.serviceClient<projetIntegration::AddTwoInts>("add_two_ints");
   projetIntegration::AddTwoInts srv;
-
+  srv.request.A  = A;
+  srv.request.B  = B;
+  srv.request.C  = C;
 
   if (client.call(srv))
   {

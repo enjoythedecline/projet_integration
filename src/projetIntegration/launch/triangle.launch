@@ -1,14 +1,5 @@
 <launch>
-	<node name="server_node" pkg="projetIntegration" type="add_two_ints_server.py" output="screen"/>
-	<param name="a.x" type="int" value="3" />
-	<param name="a.y" type="int" value="7" />
-	<param name="a.z" type="int" value="1" />
-	<param name="b.x" type="int" value="-5" />
-	<param name="b.y" type="int" value="2" />
-	<param name="b.z" type="int" value="8" />
-	<param name="c.x" type="int" value="5" />
-	<param name="c.y" type="int" value="1" />
-	<param name="c.z" type="int" value="0" />
-	<node name="client_node" pkg="projetIntegration" type="add_two_ints_client.py" output="screen"/>
+	<node name="server_node" pkg="projetIntegration" type="add_two_ints_server" output="screen"/>
+	<node name="client_node" pkg="projetIntegration" type="add_two_ints_client" output="screen"/>
 
 </launch>
